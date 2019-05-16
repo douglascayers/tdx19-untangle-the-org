@@ -29,7 +29,7 @@
     ],
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "45.0",
+    "sourceApiVersion": "46.0",
     "packageAliases": {
         "cdc-pkg1": "0HoB0000000CappKAC",
         "cdc-pkg2": "0HoB0000000CapuKAC"
