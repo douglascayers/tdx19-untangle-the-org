@@ -13,6 +13,8 @@ public inherited sharing class AccountTriggerHandler {
     public void handleAfterUpdate( List<Account> oldList, Map<ID, Account> oldMap,
                                    List<Account> newList, Map<ID, Account> newMap ) {
 
+        System.debug( 'AccountTriggerHandler' );
+
         List<Case> coldCases = new List<Case>();
 		List<Account> warmAccounts = new List<Account>();
 		List<Task> prospectTasks = new List<Task>();

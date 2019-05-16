@@ -7,6 +7,7 @@ public inherited sharing class SyncAccountsJob implements System.Queueable {
     }
 
     public void execute( System.QueueableContext context ) {
+        System.debug( 'SyncAccountsJob: context=' + context );
 		// do something with the accounts...
         // could make an http callout...
         // for simplicity, we'll just update some cases

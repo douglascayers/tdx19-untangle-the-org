@@ -2,6 +2,7 @@ public inherited sharing class SyncAccountsInvocable {
 
     @InvocableMethod( label = 'Sync Accounts' )
     public static void execute( List<Request> requests ) {
+        System.debug( 'SyncAccountsInvocable' );
 		// do something with the accounts...
         // could make an http callout...
         // for simplicity, we'll just complete some tasks
