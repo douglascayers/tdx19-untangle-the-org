@@ -25,6 +25,19 @@
             ]
         },
         {
+            "path": "demo-untangled-cdc-pkg3",
+            "default": false,
+            "package": "cdc-pkg3",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "cdc-pkg1",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
             "path": "demo-untangled-di-pkg1",
             "default": false
         },
@@ -39,8 +52,10 @@
     "packageAliases": {
         "cdc-pkg1": "0HoB0000000CappKAC",
         "cdc-pkg2": "0HoB0000000CapuKAC",
+        "cdc-pkg3": "0HoB0000000CapzKAC",
         "cdc-pkg1@0.1.0-1": "04tB0000000O1X3IAK",
+        "cdc-pkg1@0.1.0-2": "04tB0000000O1XDIA0",
         "cdc-pkg2@0.1.0-1": "04tB0000000O1X8IAK",
-        "cdc-pkg1@0.1.0-2": "04tB0000000O1XDIA0"
+        "cdc-pkg3@0.1.0-1": "04tB0000000O1XIIA0"
     }
 }
