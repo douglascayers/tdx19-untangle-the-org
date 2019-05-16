@@ -1,9 +1,9 @@
 public inherited sharing class SyncAccountsJob implements System.Queueable {
 
-    private List<Account> accounts { get; set; }
+    private Set<ID> accountIds { get; set; }
 
-    public SyncAccountsJob( List<Account> accounts ) {
-        this.accounts = accounts;
+    public SyncAccountsJob( Set<ID> accountIds ) {
+        this.accountIds = accountIds;
     }
 
     public void execute( System.QueueableContext context ) {
@@ -16,7 +16,7 @@ public inherited sharing class SyncAccountsJob implements System.Queueable {
             FROM Case
             WHERE Type = 'Cold'
     	        AND IsClosed = false
-	            AND AccountId IN :this.accounts
+	            AND AccountId IN :this.accountIds
             	AND Account.Rating IN ( 'Warm', 'Hot' )
         ] ) {
             for ( Case c : coldCases ) {

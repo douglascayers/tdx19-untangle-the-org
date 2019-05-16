@@ -16,7 +16,7 @@ public inherited sharing class AccountTriggerHandler {
         System.debug( 'AccountTriggerHandler' );
 
         List<Case> coldCases = new List<Case>();
-		List<Account> warmAccounts = new List<Account>();
+		Set<ID> warmAccountIds = new Set<ID>();
 		List<Task> prospectTasks = new List<Task>();
 
         for ( Account newAcct : newList ) {
@@ -33,10 +33,10 @@ public inherited sharing class AccountTriggerHandler {
                         ));
                     }
                     when 'Warm' {
-                        warmAccounts.add( newAcct );
+                        warmAccountIds.add( newAcct.Id );
                     }
                     when 'Hot' {
-						warmAccounts.add( newAcct );
+						warmAccountIds.add( newAcct.Id );
                     }
                 }
             }
@@ -63,8 +63,8 @@ public inherited sharing class AccountTriggerHandler {
             insert coldCases;
         }
 
-		if ( warmAccounts.size() > 0 ) {
-			System.enqueueJob( new SyncAccountsJob( warmAccounts ) );
+		if ( warmAccountIds.size() > 0 ) {
+			System.enqueueJob( new SyncAccountsJob( warmAccountIds ) );
         }
 
 	}
