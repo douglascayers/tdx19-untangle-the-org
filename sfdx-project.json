@@ -1,11 +1,37 @@
 {
-  "packageDirectories": [
-    {
-      "path": "demo-tangled-app",
-      "default": true
+    "packageDirectories": [
+        {
+            "path": "demo-tangled-app",
+            "default": false
+        },
+        {
+            "path": "demo-untangled-cdc-pkg1",
+            "default": true,
+            "package": "cdc-pkg1",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        },
+        {
+            "path": "demo-untangled-cdc-pkg2",
+            "default": false,
+            "package": "cdc-pkg2",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        },
+        {
+            "path": "demo-untangled-di-pkg1",
+            "default": false
+        },
+        {
+            "path": "demo-untangled-di-pkg2",
+            "default": false
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "45.0",
+    "packageAliases": {
+        "cdc-pkg1": "0HoB0000000CappKAC",
+        "cdc-pkg2": "0HoB0000000CapuKAC"
     }
-  ],
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "45.0"
 }
