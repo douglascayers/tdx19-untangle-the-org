@@ -23,6 +23,7 @@ public inherited sharing class AccountTriggerHandler {
 
             Account oldAcct = oldMap.get( newAcct.Id );
 
+            // Service Package / App / Team
             if ( oldAcct.Rating != newAcct.Rating ) {
                 switch on ( newAcct.Rating ) {
                     when 'Cold' {
@@ -41,6 +42,7 @@ public inherited sharing class AccountTriggerHandler {
                 }
             }
 
+            // Sales Package / App / Team
             if ( oldAcct.Type != newAcct.Type ) {
                 if ( newAcct.Type == 'Prospect' ) {
                     prospectTasks.add( new Task(
