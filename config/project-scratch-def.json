@@ -5,7 +5,8 @@
     "settings": {
         "orgPreferenceSettings": {
             "s1DesktopEnabled": true,
-            "s1EncryptedStoragePref2": false
+            "s1EncryptedStoragePref2": false,
+            "pathAssistantsEnabled": true
         }
     }
 }
