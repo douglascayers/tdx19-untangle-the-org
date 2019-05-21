@@ -58,7 +58,7 @@ rather than the classes being explicitly referenced and instantiated in the code
 When you need the processes or code from the other packages to be run
 **synchronously** or **asynchronously** from the main transaction.
 
-Also check out [Understanding the Value of Dependency Injection in the Lightning Platform](https://www.youtube.com/watch?v=oce2QO-E_3k) by [Andy Fawcett](https://twitter.com/andyinthecloud) and [Doug Ayers](https://twitter.com/douglascayers).
+Also check out [Understanding the Value of Dependency Injection in the Lightning Platform](https://www.youtube.com/watch?v=oce2QO-E_3k) by [Andy Fawcett](https://twitter.com/andyinthecloud), [John Daniel](https://twitter.com/ImJohnMDaniel), and [Doug Ayers](https://twitter.com/douglascayers).
 
 ---
 
