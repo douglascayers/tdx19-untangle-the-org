@@ -13,10 +13,14 @@ whose logic and actions may not be related but rather owned and influenced by di
 This repository includes examples of how to modularize code and metadata into packages
 using [Platform Events](https://trailhead.salesforce.com/en/content/learn/modules/platform_events_basics) or Dependency Injection with the [force-di](https://github.com/afawcett/force-di) library.
 
+---
+
 ## demo-tangled-app
 
 Example of an org where business logic and processes from multiple
 apps or teams are tangled in a shared code base and data model.
+
+---
 
 ## demo-untangled-cdc-pkg[1,2,3]
 
@@ -34,6 +38,8 @@ For business logic that truly is independent of each other but just happen to sh
 a common object (e.g. Account, Contact, Task, etc), or for business logic that can be
 performed **asynchronously** from the main transaction.
 
+---
+
 ## demo-untangled-di-pkg[1,2]
 
 Example of modularizing code and/or metadata into separate packages
@@ -49,3 +55,25 @@ rather than the classes being explicitly referenced and instantiated in the code
 
 When you need the processes or code from the other packages to be run
 **synchronously** or **asynchronously** from the main transaction.
+
+---
+
+## demo-untangled-inv-pkg[1,2]
+
+Example of modularizing processes and flows into separate packages
+by delegating logic to invocable processes and autolaunched flows.
+
+### Design Pattern
+
+Modularization and reuse. Your capstone package will contain a process
+that orchestrates calling the invocable processes and autolaunched flows
+provided by other packages. This establishes that the packages containing
+the invocable processes and flows are then dependencies for the main process.
+
+### When to Use
+
+When you need the processes or code from the other packages to be run
+**synchronously** or **asynchronously** from the main transaction.
+
+When you want to leverage declarative capabilities of process builder and flows
+and let different teams / apps / packages develop, test, release their pieces independently.
