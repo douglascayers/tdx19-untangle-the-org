@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Post_to_Chatter</name>
+        <label>Post to Chatter</label>
+        <locationX>537</locationX>
+        <locationY>51</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>varChatterMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>varNewRecord.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <decisions>
+        <name>Account_Name_Changed</name>
+        <label>Name Changed?</label>
+        <locationX>270</locationX>
+        <locationY>52</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Account_Name_Changed_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varOldRecord.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>varNewRecord.Name</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_to_Chatter</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <interviewLabel>AutolaunchedFlow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>AutolaunchedFlow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <startElementReference>Account_Name_Changed</startElementReference>
+    <status>Active</status>
+    <textTemplates>
+        <name>varChatterMessage</name>
+        <text>Hello from Autolaunched Flow!
+
+Old Name: {!varOldRecord.Name}
+
+New Name: {!varNewRecord.Name}</text>
+    </textTemplates>
+    <variables>
+        <description>The &quot;new&quot; record values.</description>
+        <name>varNewRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <description>The &quot;old&quot; record values.</description>
+        <name>varOldRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+</Flow>

@@ -2,7 +2,7 @@
     "packageDirectories": [
         {
             "path": "demo-tangled-app",
-            "default": true
+            "default": false
         },
         {
             "path": "demo-untangled-cdc-pkg1",
@@ -44,6 +44,20 @@
         {
             "path": "demo-untangled-di-pkg2",
             "default": false
+        },
+        {
+            "path": "demo-untangled-inv-pkg1",
+            "default": false,
+            "package": "inv-pkg1",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        },
+        {
+            "path": "demo-untangled-inv-pkg2",
+            "default": true,
+            "package": "inv-pkg2",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
         }
     ],
     "namespace": "",
@@ -51,10 +65,16 @@
     "sourceApiVersion": "46.0",
     "packageAliases": {
         "cdc-pkg1": "0HoB0000000CappKAC",
-        "cdc-pkg2": "0HoB0000000CapuKAC",
-        "cdc-pkg3": "0HoB0000000CapzKAC",
         "cdc-pkg1@0.1.0-3": "04tB0000000O1XNIA0",
+
+        "cdc-pkg2": "0HoB0000000CapuKAC",
         "cdc-pkg2@0.1.0-1": "04tB0000000O1X8IAK",
-        "cdc-pkg3@0.1.0-1": "04tB0000000O1XIIA0"
+
+        "cdc-pkg3": "0HoB0000000CapzKAC",
+        "cdc-pkg3@0.1.0-1": "04tB0000000O1XIIA0",
+
+        "inv-pkg1": "0HoB0000000Caq4KAC",
+
+        "inv-pkg2": "0HoB0000000Caq9KAC"
     }
 }
