@@ -129,28 +129,16 @@
             <connector>
                 <targetReference>myRule_1_A1</targetReference>
             </connector>
-            <label>Name Changed</label>
+            <label>Always</label>
         </rules>
     </decisions>
     <description>Calls autolaunched flow with old and new records.</description>
     <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>OR(
-  ISNEW(),
-  ISCHANGED( [Account].Name )
-)</stringValue>
-            </value>
-        </processMetadataValues>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
-        <expression>OR(
-  ISNEW(),
-  ISCHANGED( {!myVariable_current.Name} )
-)</expression>
+        <expression>true</expression>
     </formulas>
-    <interviewLabel>RecordChangeProcess_Invoke_Flow-1_InterviewLabel</interviewLabel>
+    <interviewLabel>RecordChangeProcess_Invoke_Flow-4_InterviewLabel</interviewLabel>
     <label>RecordChangeProcess - Invoke Flow</label>
     <processMetadataValues>
         <name>ObjectType</name>
