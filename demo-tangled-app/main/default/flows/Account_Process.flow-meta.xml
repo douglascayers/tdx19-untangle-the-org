@@ -8,13 +8,13 @@
             </value>
         </processMetadataValues>
         <name>myRule_1_A1</name>
-        <label>Notify Owner</label>
+        <label>Message Owner</label>
         <locationX>100</locationX>
         <locationY>200</locationY>
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
-            <targetReference>myDecision2</targetReference>
+            <targetReference>myAssignment_myRule_1_A2</targetReference>
         </connector>
         <inputParameters>
             <name>text</name>
@@ -34,6 +34,107 @@
     </actionCalls>
     <actionCalls>
         <processMetadataValues>
+            <name>customNotifTypeName</name>
+            <value>
+                <stringValue>New_Account_Notification</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>recipientCategory</name>
+            <value>
+                <stringValue>owner</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>recipientType</name>
+            <value>
+                <stringValue>reference</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A2</name>
+        <label>Notify Owner</label>
+        <locationX>100</locationX>
+        <locationY>300</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <connector>
+            <targetReference>myDecision2</targetReference>
+        </connector>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <stringValue>000000000000000</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>customNotifTypeName</name>
+            <value>
+                <stringValue>New_Account_Notification</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <stringValue>New account assigned to you</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <stringValue>The account {!myVariable_current.Name} has been assigned to you.</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <stringValue>{!myVariable_current.Id}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>recipientIds</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>500.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>myCollection_myRule_1_A2recipientIds</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
             <name>textJson</name>
             <value>
                 <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;Hello from Process Builder!\n\nNew Name: {![Account].Name}&quot;}</stringValue>
@@ -46,7 +147,7 @@
         <actionName>chatterPost</actionName>
         <actionType>chatterPost</actionType>
         <connector>
-            <targetReference>myDecision4</targetReference>
+            <targetReference>myAssignment_myRule_3_A2</targetReference>
         </connector>
         <inputParameters>
             <name>text</name>
@@ -63,6 +164,107 @@ New Name: {!myVariable_current.Name}</stringValue>
             <name>subjectNameOrId</name>
             <value>
                 <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>customNotifTypeName</name>
+            <value>
+                <stringValue>New_Account_Notification</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>recipientCategory</name>
+            <value>
+                <stringValue>owner</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>recipientType</name>
+            <value>
+                <stringValue>reference</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_3_A2</name>
+        <label>Notify Owner</label>
+        <locationX>300</locationX>
+        <locationY>300</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <connector>
+            <targetReference>myDecision4</targetReference>
+        </connector>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <stringValue>000000000000000</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>customNotifTypeName</name>
+            <value>
+                <stringValue>New_Account_Notification</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <stringValue>{!myVariable_current.LastModifiedBy.FirstName} {!myVariable_current.LastModifiedBy.LastName} renamed an account that you own</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <stringValue>New Name: {!myVariable_current.Name}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <stringValue>{!myVariable_current.Id}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>recipientIds</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>500.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>myCollection_myRule_3_A2recipientIds</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -122,6 +324,38 @@ New Name: {!myVariable_current.Name}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
+    <assignments>
+        <name>myAssignment_myRule_1_A2</name>
+        <label>myAssignment_myRule_1_A2</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>myCollection_myRule_1_A2recipientIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>myVariable_current.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>myRule_1_A2</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>myAssignment_myRule_3_A2</name>
+        <label>myAssignment_myRule_3_A2</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>myCollection_myRule_3_A2recipientIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>myVariable_current.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>myRule_3_A2</targetReference>
+        </connector>
+    </assignments>
     <decisions>
         <name>isChangedDecision6_myRule_5_Type</name>
         <label>isChangedDecision6_myRule_5_Type</label>
@@ -290,7 +524,7 @@ New Name: {!myVariable_current.Name}</stringValue>
                 <leftValueReference>myVariable_current.Type</leftValueReference>
                 <operator>StartsWith</operator>
                 <rightValue>
-                    <elementReference>formula_7_myRule_5_5105783435</elementReference>
+                    <elementReference>formula_7_myRule_5_9400576086</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -306,7 +540,7 @@ New Name: {!myVariable_current.Name}</stringValue>
                 <stringValue>&quot;Customer&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_7_myRule_5_5105783435</name>
+        <name>formula_7_myRule_5_9400576086</name>
         <dataType>String</dataType>
         <expression>&quot;Customer&quot;</expression>
     </formulas>
@@ -338,7 +572,7 @@ New Name: {!myVariable_current.Name}</stringValue>
   ISCHANGED( {!myVariable_current.Name} )
 )</expression>
     </formulas>
-    <interviewLabel>Account_Process-12_InterviewLabel</interviewLabel>
+    <interviewLabel>Account_Process-13_InterviewLabel</interviewLabel>
     <label>Account Process</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -367,6 +601,20 @@ New Name: {!myVariable_current.Name}</stringValue>
     <processType>Workflow</processType>
     <startElementReference>isChangedDecision6_myRule_5_Type</startElementReference>
     <status>Active</status>
+    <variables>
+        <name>myCollection_myRule_1_A2recipientIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>myCollection_myRule_3_A2recipientIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>myVariable_current</name>
         <dataType>SObject</dataType>

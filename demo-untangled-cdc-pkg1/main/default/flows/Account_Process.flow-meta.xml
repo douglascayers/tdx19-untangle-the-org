@@ -1,48 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionCalls>
-        <processMetadataValues>
-            <name>textJson</name>
-            <value>
-                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;Congratulations, @[{![Account].OwnerId}], you have been assigned a new account!&quot;}</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_1_A1</name>
-        <label>Notify Owner</label>
-        <locationX>100</locationX>
-        <locationY>200</locationY>
-        <actionName>chatterPost</actionName>
-        <actionType>chatterPost</actionType>
-        <connector>
-            <targetReference>myDecision2</targetReference>
-        </connector>
-        <inputParameters>
-            <name>text</name>
-            <value>
-                <stringValue>Congratulations, @[{!myVariable_current.OwnerId}], you have been assigned a new account!</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>type</name>
-        </inputParameters>
-        <inputParameters>
-            <name>subjectNameOrId</name>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
     <decisions>
-        <name>isChangedDecision4_myRule_3_Rating</name>
-        <label>isChangedDecision4_myRule_3_Rating</label>
+        <name>isChangedDecision5_myRule_4_Rating</name>
+        <label>isChangedDecision5_myRule_4_Rating</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision8_myRule_7_Type</targetReference>
+            <targetReference>isChangedDecision9_myRule_8_Type</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_4_myRule_3_Rating</name>
+            <name>isChangedRule_5_myRule_4_Rating</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -59,14 +27,14 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>isChangedDecision8_myRule_7_Type</targetReference>
+                <targetReference>isChangedDecision9_myRule_8_Type</targetReference>
             </connector>
-            <label>isChangedRule_4_myRule_3_Rating</label>
+            <label>isChangedRule_5_myRule_4_Rating</label>
         </rules>
     </decisions>
     <decisions>
-        <name>isChangedDecision8_myRule_7_Type</name>
-        <label>isChangedDecision8_myRule_7_Type</label>
+        <name>isChangedDecision9_myRule_8_Type</name>
+        <label>isChangedDecision9_myRule_8_Type</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
@@ -74,7 +42,7 @@
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_8_myRule_7_Type</name>
+            <name>isChangedRule_9_myRule_8_Type</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -93,7 +61,7 @@
             <connector>
                 <targetReference>myDecision</targetReference>
             </connector>
-            <label>isChangedRule_8_myRule_7_Type</label>
+            <label>isChangedRule_9_myRule_8_Type</label>
         </rules>
     </decisions>
     <decisions>
@@ -108,7 +76,7 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision2</targetReference>
+            <targetReference>myDecision3</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
@@ -124,7 +92,7 @@
             <connector>
                 <targetReference>myRule_1_A1</targetReference>
             </connector>
-            <label>Announce New Account</label>
+            <label>Name Changed</label>
         </rules>
     </decisions>
     <decisions>
@@ -134,16 +102,16 @@
                 <numberValue>1.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision2</name>
-        <label>myDecision2</label>
+        <name>myDecision3</name>
+        <label>myDecision3</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision6</targetReference>
+            <targetReference>myDecision7</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_3</name>
+            <name>myRule_4</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -170,14 +138,14 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_4_myRule_3_Rating</leftValueReference>
+                <leftValueReference>isChangedRule_5_myRule_4_Rating</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_3_A1</targetReference>
+                <targetReference>myRule_4_A1</targetReference>
             </connector>
             <label>Rating Changed</label>
         </rules>
@@ -189,13 +157,13 @@
                 <numberValue>2.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision6</name>
-        <label>myDecision6</label>
+        <name>myDecision7</name>
+        <label>myDecision7</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_7</name>
+            <name>myRule_8</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -222,14 +190,14 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_8_myRule_7_Type</leftValueReference>
+                <leftValueReference>isChangedRule_9_myRule_8_Type</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_7_A1</targetReference>
+                <targetReference>myRule_8_A1</targetReference>
             </connector>
             <label>Type Changed</label>
         </rules>
@@ -239,21 +207,10 @@
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>PRIORVALUE( [Account].Rating )</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_5_myRule_3_A1_7100944437</name>
-        <dataType>String</dataType>
-        <expression>PRIORVALUE( {!myVariable_current.Rating} )</expression>
-    </formulas>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
                 <stringValue>PRIORVALUE( [Account].Type )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_7_A1_1384802416</name>
+        <name>formula_10_myRule_8_A1_7577290907</name>
         <dataType>String</dataType>
         <expression>PRIORVALUE( {!myVariable_current.Type} )</expression>
     </formulas>
@@ -261,14 +218,42 @@
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>ISNEW()</stringValue>
+                <stringValue>PRIORVALUE([Account].Name)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_2_myRule_1_A1_2155892504</name>
+        <dataType>String</dataType>
+        <expression>PRIORVALUE({!myVariable_current.Name})</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>PRIORVALUE( [Account].Rating )</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_6_myRule_4_A1_3723890875</name>
+        <dataType>String</dataType>
+        <expression>PRIORVALUE( {!myVariable_current.Rating} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>OR(
+  ISNEW(),
+  ISCHANGED( [Account].Name )
+)</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
-        <expression>ISNEW()</expression>
+        <expression>OR(
+  ISNEW(),
+  ISCHANGED( {!myVariable_current.Name} )
+)</expression>
     </formulas>
-    <interviewLabel>Account_Process-5_InterviewLabel</interviewLabel>
+    <interviewLabel>Account_Process-6_InterviewLabel</interviewLabel>
     <label>Account Process</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -296,12 +281,124 @@
     </processMetadataValues>
     <processType>Workflow</processType>
     <recordCreates>
-        <name>myRule_3_A1</name>
+        <name>myRule_1_A1</name>
         <label>Publish Event</label>
-        <locationX>300</locationX>
+        <locationX>100</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myDecision6</targetReference>
+            <targetReference>myDecision3</targetReference>
+        </connector>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Account ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>AccountId__c</field>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>New Name</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>New_Name__c</field>
+            <value>
+                <elementReference>myVariable_current.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Old Name</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Old_Name__c</field>
+            <value>
+                <elementReference>formula_2_myRule_1_A1_2155892504</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account_Name_Change__e</object>
+    </recordCreates>
+    <recordCreates>
+        <name>myRule_4_A1</name>
+        <label>Publish Event</label>
+        <locationX>400</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myDecision7</targetReference>
         </connector>
         <inputAssignments>
             <processMetadataValues>
@@ -402,15 +499,15 @@
             </processMetadataValues>
             <field>Old_Rating__c</field>
             <value>
-                <elementReference>formula_5_myRule_3_A1_7100944437</elementReference>
+                <elementReference>formula_6_myRule_4_A1_3723890875</elementReference>
             </value>
         </inputAssignments>
         <object>Account_Rating_Change__e</object>
     </recordCreates>
     <recordCreates>
-        <name>myRule_7_A1</name>
+        <name>myRule_8_A1</name>
         <label>Publish Event</label>
-        <locationX>700</locationX>
+        <locationX>800</locationX>
         <locationY>200</locationY>
         <inputAssignments>
             <processMetadataValues>
@@ -511,12 +608,12 @@
             </processMetadataValues>
             <field>Old_Type__c</field>
             <value>
-                <elementReference>formula_9_myRule_7_A1_1384802416</elementReference>
+                <elementReference>formula_10_myRule_8_A1_7577290907</elementReference>
             </value>
         </inputAssignments>
         <object>Account_Type_Change__e</object>
     </recordCreates>
-    <startElementReference>isChangedDecision4_myRule_3_Rating</startElementReference>
+    <startElementReference>isChangedDecision5_myRule_4_Rating</startElementReference>
     <status>Active</status>
     <variables>
         <name>myVariable_current</name>

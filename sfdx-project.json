@@ -2,11 +2,11 @@
     "packageDirectories": [
         {
             "path": "demo-tangled-app",
-            "default": true
+            "default": false
         },
         {
             "path": "demo-untangled-cdc-pkg1",
-            "default": false,
+            "default": true,
             "package": "cdc-pkg1",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT"
@@ -36,6 +36,13 @@
                     "versionNumber": "0.1.0.LATEST"
                 }
             ]
+        },
+        {
+            "path": "demo-untangled-cdc-pkg4",
+            "default": false,
+            "package": "cdc-pkg4",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
         },
         {
             "path": "demo-untangled-di-pkg1",
@@ -78,6 +85,8 @@
 
         "cdc-pkg3": "0HoB0000000CapzKAC",
         "cdc-pkg3@0.1.0-1": "04tB0000000O1XIIA0",
+
+        "cdc-pkg4": "0HoB0000000CaqEKAS",
 
         "inv-pkg1": "0HoB0000000Caq4KAC",
         "inv-pkg1@0.1.0-1": "04tB0000000O1fiIAC",

@@ -22,7 +22,7 @@ apps or teams are tangled in a shared code base and data model.
 
 ---
 
-## demo-untangled-cdc-pkg[1,2,3]
+## demo-untangled-cdc-pkg[1,2,3,4]
 
 Example of modularizing code and/or metadata into separate packages
 by moving business logic out of a shared trigger on the Account object
