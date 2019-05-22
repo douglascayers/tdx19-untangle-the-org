@@ -301,7 +301,7 @@ Congratulations, @[{!myVariable_event_context.OwnerId}], you have been assigned 
         <queriedFields>OwnerId</queriedFields>
     </recordLookups>
     <startElementReference>myEventContextRecordLookup</startElementReference>
-    <status>Draft</status>
+    <status>Active</status>
     <textTemplates>
         <description>text template for when multiple records are records found</description>
         <name>multipleRecordsFoundTextTemplate</name>
