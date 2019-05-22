@@ -58,7 +58,7 @@
             </processMetadataValues>
             <name>SObject</name>
             <value>
-                <elementReference>myVariable_old</elementReference>
+                <elementReference>myVariable_current</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -108,8 +108,8 @@
   ISCHANGED( {!myVariable_current.Name} )
 )</expression>
     </formulas>
-    <interviewLabel>RecordChangeProcess_Invoke_Process-1_InterviewLabel</interviewLabel>
-    <label>RecordChangeProcess - Invoke Process</label>
+    <interviewLabel>RecordChangeProcess_Invoke_Process-4_InterviewLabel</interviewLabel>
+    <label>RecordChangeProcess - Invoke Process (pkg1)</label>
     <processMetadataValues>
         <name>ObjectType</name>
         <value>

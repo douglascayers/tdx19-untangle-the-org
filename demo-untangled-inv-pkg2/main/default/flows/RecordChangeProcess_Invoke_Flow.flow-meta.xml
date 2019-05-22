@@ -58,7 +58,7 @@
             </processMetadataValues>
             <name>varOldRecord</name>
             <value>
-                <elementReference>myVariable_old</elementReference>
+                <elementReference>myVariable_current</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -138,8 +138,8 @@
         <dataType>Boolean</dataType>
         <expression>true</expression>
     </formulas>
-    <interviewLabel>RecordChangeProcess_Invoke_Flow-4_InterviewLabel</interviewLabel>
-    <label>RecordChangeProcess - Invoke Flow</label>
+    <interviewLabel>RecordChangeProcess_Invoke_Flow-5_InterviewLabel</interviewLabel>
+    <label>RecordChangeProcess - Invoke Flow (pkg1)</label>
     <processMetadataValues>
         <name>ObjectType</name>
         <value>
@@ -166,7 +166,7 @@
     </processMetadataValues>
     <processType>Workflow</processType>
     <startElementReference>myDecision</startElementReference>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>myVariable_current</name>
         <dataType>SObject</dataType>

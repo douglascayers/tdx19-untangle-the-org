@@ -16,7 +16,7 @@
         <inputParameters>
             <name>emailBody</name>
             <value>
-                <stringValue>The InvocableProcess-1 invocable process failed to start because no records in your org match the record Id specified. In the entities that invoke InvocableProcess-1, such as other processes, check the value for this input: SObjectId.</stringValue>
+                <stringValue>The InvocableProcess-2 invocable process failed to start because no records in your org match the record Id specified. In the entities that invoke InvocableProcess-2, such as other processes, check the value for this input: SObjectId.</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -42,7 +42,7 @@
         <inputParameters>
             <name>emailBody</name>
             <value>
-                <stringValue>The InvocableProcess-1 invocable process failed to start because a valid value wasn&#39;t found. This can happen when entities that invoke InvocableProcess-1, such as other processes, don&#39;t have values for either the SObject or SObjectId. For example: 
+                <stringValue>The InvocableProcess-2 invocable process failed to start because a valid value wasn&#39;t found. This can happen when entities that invoke InvocableProcess-2, such as other processes, don&#39;t have values for either the SObject or SObjectId. For example: 
 -An SObject or SObject ID wasn&#39;t specified.
 -A value might have been included, but it was null at runtime. </stringValue>
             </value>
@@ -181,8 +181,8 @@
         <dataType>Boolean</dataType>
         <expression>true</expression>
     </formulas>
-    <interviewLabel>InvocableProcess-1_InterviewLabel</interviewLabel>
-    <label>InvocableProcess</label>
+    <interviewLabel>InvocableProcess-2_InterviewLabel</interviewLabel>
+    <label>InvocableProcess (pkg2)</label>
     <processMetadataValues>
         <name>ObjectType</name>
         <value>
@@ -211,7 +211,7 @@
         <queriedFields>Name</queriedFields>
     </recordLookups>
     <startElementReference>sobjectInputCheckDecision</startElementReference>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>SObject</name>
         <dataType>SObject</dataType>
