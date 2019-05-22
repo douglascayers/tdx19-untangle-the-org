@@ -210,7 +210,7 @@
                 <stringValue>PRIORVALUE( [Account].Type )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_10_myRule_8_A1_7577290907</name>
+        <name>formula_10_myRule_8_A1_6943588222</name>
         <dataType>String</dataType>
         <expression>PRIORVALUE( {!myVariable_current.Type} )</expression>
     </formulas>
@@ -221,7 +221,7 @@
                 <stringValue>PRIORVALUE([Account].Name)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_2155892504</name>
+        <name>formula_2_myRule_1_A1_4596658375</name>
         <dataType>String</dataType>
         <expression>PRIORVALUE({!myVariable_current.Name})</expression>
     </formulas>
@@ -232,7 +232,7 @@
                 <stringValue>PRIORVALUE( [Account].Rating )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_6_myRule_4_A1_3723890875</name>
+        <name>formula_6_myRule_4_A1_5166720224</name>
         <dataType>String</dataType>
         <expression>PRIORVALUE( {!myVariable_current.Rating} )</expression>
     </formulas>
@@ -253,8 +253,8 @@
   ISCHANGED( {!myVariable_current.Name} )
 )</expression>
     </formulas>
-    <interviewLabel>Account_Process-6_InterviewLabel</interviewLabel>
-    <label>Account Process</label>
+    <interviewLabel>Account_Process-2_InterviewLabel</interviewLabel>
+    <label>Account Process (base pkg)</label>
     <processMetadataValues>
         <name>ObjectType</name>
         <value>
@@ -387,7 +387,7 @@
             </processMetadataValues>
             <field>Old_Name__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_2155892504</elementReference>
+                <elementReference>formula_2_myRule_1_A1_4596658375</elementReference>
             </value>
         </inputAssignments>
         <object>Account_Name_Change__e</object>
@@ -499,7 +499,7 @@
             </processMetadataValues>
             <field>Old_Rating__c</field>
             <value>
-                <elementReference>formula_6_myRule_4_A1_3723890875</elementReference>
+                <elementReference>formula_6_myRule_4_A1_5166720224</elementReference>
             </value>
         </inputAssignments>
         <object>Account_Rating_Change__e</object>
@@ -608,7 +608,7 @@
             </processMetadataValues>
             <field>Old_Type__c</field>
             <value>
-                <elementReference>formula_10_myRule_8_A1_7577290907</elementReference>
+                <elementReference>formula_10_myRule_8_A1_6943588222</elementReference>
             </value>
         </inputAssignments>
         <object>Account_Type_Change__e</object>
