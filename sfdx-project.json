@@ -2,7 +2,7 @@
     "packageDirectories": [
         {
             "path": "demo-tangled-app",
-            "default": false
+            "default": true
         },
         {
             "path": "demo-untangled-cdc-pkg1",
@@ -54,7 +54,7 @@
         },
         {
             "path": "demo-untangled-inv-pkg1",
-            "default": true,
+            "default": false,
             "package": "inv-pkg1",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT"
