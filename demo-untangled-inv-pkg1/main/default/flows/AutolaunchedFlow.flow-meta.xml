@@ -23,12 +23,26 @@
     <decisions>
         <name>Account_Name_Changed</name>
         <label>Name Changed?</label>
-        <locationX>270</locationX>
+        <locationX>272</locationX>
         <locationY>52</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Account_Name_Changed_Yes</name>
             <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varOldRecord</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varNewRecord</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
             <conditions>
                 <leftValueReference>varOldRecord.Name</leftValueReference>
                 <operator>NotEqualTo</operator>

@@ -6,7 +6,7 @@
         },
         {
             "path": "demo-untangled-cdc-pkg1",
-            "default": true,
+            "default": false,
             "package": "cdc-pkg1",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT"
@@ -54,7 +54,7 @@
         },
         {
             "path": "demo-untangled-inv-pkg1",
-            "default": false,
+            "default": true,
             "package": "inv-pkg1",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT"
