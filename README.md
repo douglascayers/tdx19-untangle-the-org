@@ -42,26 +42,6 @@ Also check out [Microservice Based Architecture Using Platform Events](https://w
 
 ---
 
-## demo-untangled-di-pkg[1,2]
-
-Example of modularizing code and/or metadata into separate packages
-by shifting compile-time dependencies to runtime dependencies using
-Dependency Injection with the [force-di](https://github.com/afawcett/force-di) library.
-
-### Design Pattern
-
-Dependency Injection. The Apex classes that are executed are not known until runtime,
-rather than the classes being explicitly referenced and instantiated in the code at compile time.
-
-### When to Use
-
-When you need the processes or code from the other packages to be run
-**synchronously** or **asynchronously** from the main transaction.
-
-Also check out [Understanding the Value of Dependency Injection in the Lightning Platform](https://www.youtube.com/watch?v=oce2QO-E_3k) by [Andy Fawcett](https://twitter.com/andyinthecloud), [John Daniel](https://twitter.com/ImJohnMDaniel), and [Doug Ayers](https://twitter.com/douglascayers).
-
----
-
 ## demo-untangled-inv-pkg[1,2]
 
 Example of modularizing processes and flows into separate packages
@@ -83,3 +63,23 @@ When you want to leverage declarative capabilities of process builder and flows
 and let different teams / apps / packages develop, test, release their pieces independently.
 
 Also check out [Maximize “DRY” (Don’t Repeat Yourself) in Process Builder by Building Reusable Processes](https://jenwlee.wordpress.com/2016/11/08/minimize-dry-dont-repeat-yourself-in-process-builder-by-building-reusable-processes/) by [Jen Lee](https://twitter.com/jenwlee).
+
+---
+
+## Dependency Injection
+
+Example of modularizing code and/or metadata into separate packages
+by shifting compile-time dependencies to runtime dependencies using
+Dependency Injection with the [force-di](https://github.com/afawcett/force-di) library.
+
+### Design Pattern
+
+Dependency Injection. The Apex classes that are executed are not known until runtime,
+rather than the classes being explicitly referenced and instantiated in the code at compile time.
+
+### When to Use
+
+When you need the processes or code from the other packages to be run
+**synchronously** or **asynchronously** from the main transaction.
+
+Also check out [Understanding the Value of Dependency Injection in the Lightning Platform](https://www.youtube.com/watch?v=oce2QO-E_3k) by [Andy Fawcett](https://twitter.com/andyinthecloud), [John Daniel](https://twitter.com/ImJohnMDaniel), and [Doug Ayers](https://twitter.com/douglascayers).
