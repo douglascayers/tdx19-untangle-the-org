@@ -45,14 +45,6 @@
             "versionNumber": "0.1.0.NEXT"
         },
         {
-            "path": "demo-untangled-di-pkg1",
-            "default": false
-        },
-        {
-            "path": "demo-untangled-di-pkg2",
-            "default": false
-        },
-        {
             "path": "demo-untangled-inv-pkg1",
             "default": false,
             "package": "inv-pkg1",
